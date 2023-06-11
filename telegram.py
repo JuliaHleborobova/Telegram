@@ -1,4 +1,3 @@
-# в курсовом проекте от 150 строк
 
 import telebot
 from config import token
@@ -7,7 +6,6 @@ import requests
 import re
 import telebot.callback_data
 import datetime
-
 
 
 bot = telebot.TeleBot(token)
@@ -114,33 +112,6 @@ def answer(callback):
 # Запускаем бота
 bot.polling(none_stop=True, interval=0)
 
-
-
-
-
-
-
-
-
-        # # при нажатии кнопки делаем ответное сообщение и выдаем обычные кнопки.
-        # if callback.data == 'Овен':
-        #     markup_reply = types.ReplyKeyboardMarkup(resize_keyboard = True)  #тоже создадим клавиатуру. Параметр resize_keyboard, чтобы сделать клавиатуру меньше, иначе кнопки будут большими и некрасивыми.
-        #     item_id = types.KeyboardButton('МОЙ ID')  # заносим сюда наши кнопки
-        #     item_username = types.KeyboardButton('МОЙ НИК') # еще кнопка - мой ник
-        #
-        #     # присоединим эти кнопки к клавиатуре
-        #     markup_reply.add (item_id, item_username)
-        #
-        #     #выведем текст + привяжем кнопки к inputу (=reply_markup)
-        #     bot.send_message(callback.message.chat.id, "Нажмите на одну из этих кнопок",
-        #                         reply_markup = markup_reply)
-
-        # @bot.message_handler(content_types = ['text'])
-        # def get_text(message):
-        #     if message.text == 'МОй ID':
-        #         bot.send_message(message.chat.id, f'Твой ID: {message.from_user.id}')
-        #     elif message.text == 'МОЙ НИК':
-        #         bot.send_message(message.chat.id, f'Твой ник: {message.from_user.first_name}')
 
 
 
